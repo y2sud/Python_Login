@@ -33,4 +33,4 @@ Model.py:
   
   -- encrypted password --> this needs to be generated using cryp.py --> put your password on line 28 and see the encrypted text from print statement on line 29.
 
-I used MySQL workbench to connect to db server and create tables. Also attached is DDL statement to create table.
+I used MySQL workbench to connect to db server and create table. Also attached is the DDL statement.
