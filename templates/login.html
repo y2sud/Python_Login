@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<style>
+    html {height: 100%;}
+    body {height:100%;}
+</style>
+
+<body style="background-color: lightsalmon;">
+<div class="column is-offset-2">
+<h3 class="title">Login & Signup demonstration in Flask</h3>
+</div>
+
+<div class="column is-offset-4">
+    {% with messages=get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for msg in messages %}
+            <li><strong> {{ msg }} </strong></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="column is-4 is-offset-4">
+<h3 class="subtitle"><b>Login:</b></h3>
+<div class="box">
+    <form action="/login" method="POST">
+
+    <div class="field">
+        <div class="control">
+            <label for="user"><b>User&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+            <input class="input is-fullwidth" type="text" placeholder="Enter username" name="user" required autofocus="">
+        </div>
+    </div>        
+
+    <div class="field">
+        <div class="control">
+            <label for="psw"><b>Password</b></label>
+            <input class="input is-fullwidth" type="password" placeholder="Enter Password" name="psw" required autofocus="">
+        </div>
+    </div>
+  
+    <button type="submit" class="button is-block is-info is-fullwidth">LOGIN</button>
+
+    <!--input type="submit" value="LOGIN"-->
+
+    </form>
+</div>
+
+{% if error %}
+<p><b>Error: "{{ error }}"</b></p>
+{% endif %}
+
+<br>
+<form action='/new', method='GET'>
+    <h3 class="subtitle"><b>New User:</b></h3>
+    <button type="submit" class="button is-block is-info ">REGISTER</button>
+</form>
+
+</div>
+
+</body>
+
+</html>
