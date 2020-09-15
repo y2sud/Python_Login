@@ -5,7 +5,7 @@ This is a simple UI to register user, and login/logout users using Python. This 
 Start web server:
 
 1. Create conda env using env_py37.yml
-> conda create env -f env_py37.yml
+> conda env create -f env_py37.yml
 
 2. Goto the folder containing Python_Login in command prompt and -->
 > set FLASK_APP=Python_Login
