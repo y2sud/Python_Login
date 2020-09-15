@@ -9,6 +9,7 @@ Start web server:
 
 2. Goto the folder containing Python_Login in command prompt and -->
   > set FLASK_APP=Python_Login
+
   > set FLASK_DEBUG=1
 
 3. Start the web server
